@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:schema:2.4.0:DbSchema/etc/db_schema.xsd">
+    <table name="catalog_product_entity_custom_field" resource="default">
+        <column xsi:type="int" name="cf_id" nullable="false" unsigned="true" comment="Custom Field ID" identity="true"/>
+        <column xsi:type="int" name="priority" nullable="false" comment="Priority"/>
+        <column xsi:type="varchar" name="vendor_name" nullable="false" length="255" comment="Vendor Name"/>
+        <column xsi:type="int" name="product_id" unsigned="true" nullable="false" comment="Product ID"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="cf_id"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="CATALOG_PRODUCT_ENTTITY_CUSTOM_FIELD_PRODUCT_ID_CATALOG_PRODUCT_ENTITY_ENTITY_ID" table="catalog_product_entity_custom_field" column="product_id" referenceTable="catalog_product_entity" referenceColumn="entity_id" onDelete="CASCADE"/>
+    </table>
+</schema>
