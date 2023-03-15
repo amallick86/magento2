@@ -103,7 +103,7 @@ php bin/magento setup:upgrade
 ## Database Changes
 1. search for the table ```setup_module``` and there you will be fine ```Products_CustomFields```
 [![db.png](https://i.postimg.cc/BnJJPrZk/db.png)](https://postimg.cc/WhYBQfkw)
-2.serch for the table ```catalog_product_entity_custom_field``` new table with two custom field priority(int), vendor_name(varchar) linked with product
+2. serch for the table ```catalog_product_entity_custom_field``` new table with two custom field priority(int), vendor_name(varchar) linked with product
 [![table.png](https://i.postimg.cc/vBVJNhH5/table.png)](https://postimg.cc/S2m1XW9K)
 3. Add product through admin pannel http://shopping.magento.com/admin
 ``` 
