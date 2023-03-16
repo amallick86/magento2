@@ -84,37 +84,38 @@ You can change according to your preference
 * –db-name: your database name 
 * –db-password: your database password 
 
-12. Go to ```C:\xampp\htdocs\magento2\vendor\magento\framework\View\Element\Template\File``` Edit ```Validator.php``` find ```strpos($realPath, $directory)``` replace with
+13. Go to ```C:\xampp\htdocs\magento2\vendor\magento\framework\View\Element\Template\File``` Edit ```Validator.php``` find ```strpos($realPath, $directory)``` replace with
 ```
 strpos($path, $directory)
 ```
-13. Open up ```app/etc/di.xml``` in the editor,
+14. Open up ```app/etc/di.xml``` in the editor,
 – Find the path 
 ```
 “Magento\Framework\App\View\Asset\MaterializationStrategy\Symlink” and replace to “Magento\Framework\App\View\Asset\MaterializationStrategy\Copy”
 ```
-14.  To upgrade the database and deploy static view files run
+15.  To upgrade the database and deploy static view files run
 ```
 php bin/magento indexer:reindex
 php bin/magento setup:upgrade
 ```
-15. >php bin/magento setup:static-content:deploy -f
-16. >php bin/magento cache:flush
-## Database Changes
+16. >php bin/magento setup:static-content:deploy -f
+17. >php bin/magento cache:flush
+## Database Changes and Project Screenshots
 1. search for the table ```setup_module``` and there you will be fine ```Products_CustomFields```
 [![db.png](https://i.postimg.cc/BnJJPrZk/db.png)](https://postimg.cc/WhYBQfkw)
 2. serch for the table ```catalog_product_entity_custom_field``` new table with two custom field priority(int), vendor_name(varchar) linked with product
 [![table.png](https://i.postimg.cc/vBVJNhH5/table.png)](https://postimg.cc/S2m1XW9K)
-3. Add product through admin pannel http://shopping.magento.com/admin
+3. Add product and ```New custom field``` through admin pannel http://shopping.magento.com/admin
 ``` 
     username: admin
     pasword: Admin@123456
 ```
-4. Add data to ```catalog_product_entity_custom_field``` through db directly 
+[![product.png](https://i.postimg.cc/T3n3GTDh/product.png)](https://postimg.cc/yDYHy4nz)
+
 5. go to http://shopping.magento.com/ 
 [![home.png](https://i.postimg.cc/7ZzSbT6m/home.png)](https://postimg.cc/5XxXRy8C)
 ```click on product card ```
-[![details.png](https://i.postimg.cc/PJNwHC9b/details.png)](https://postimg.cc/gLFJq2Yr)
+[![demo.png](https://i.postimg.cc/x8yVh17S/demo.png)](https://postimg.cc/1VtdNssW)
 
 ```
 **** In this repo custom field is created by model and shown in frontend page ****
