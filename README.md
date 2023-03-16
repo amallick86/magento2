@@ -16,7 +16,7 @@
 3. Go to c:\\xampp\htdocs\elasticSearch7.16.3\bin select "elasticsearch.bat"  and RUN as administrator
 4. verify it on chrome http://localhost:9200
 5.clone this repo using command 
-> git clone 
+> git clone https://github.com/amallick86/magento2.git
 6. open xampp server on Apache section click on config button select php.ini
 ```
 search for :- 
